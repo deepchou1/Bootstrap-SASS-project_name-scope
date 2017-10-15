@@ -1,0 +1,183 @@
+//--Home page style-------
+//--Home page Showcase
+.showcase{
+    min-height: 100px;
+    width: 100%;
+    &.inner-page-heading{
+        @include add-border(3px, $primary-color, bottom)
+    }
+    .showcase-detail{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .showcase-heading{
+        display: inline-block;
+        width:auto;
+        line-height: 55px;
+        margin: 0 0 0 0;
+    }
+}
+.showcase-img{
+        float: right;
+        width: auto;
+        max-width: 50%;
+        @include add-border(1px, $primary-color, all);
+    }
+
+
+
+//--Home page Recent work tabs
+.nav-tabs{
+    border: none;
+    .nav-item{
+        float: none;
+        display: inline-block;
+        .nav-link{
+            @include border-radius(4px);
+            border: none !important;
+        }
+        &.active .nav-link{
+            color: darken($primary-color, 10%);
+        }
+    }
+    &.inner-page .nav-item.active .nav-link{
+        background: darken($primary-color, 10%);
+        color: $default-color;
+    }
+}
+.tab-pane {
+    margin-top: 15px;
+    
+}
+
+//blog section
+.img-n-details{
+    margin-bottom: 25px;
+    background: $default-color;
+    float: none;
+    display: inline-block;
+    @include add-border(1px, $primary-color, all);
+    .img-holder{
+        width: 100%;
+        display: inline-block;
+        img{
+            height:150px;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .img-details{
+        padding: 0 15px 10px;
+        color: $fc-base;
+        .date{
+            font-style: italic;
+        }
+    }
+}
+
+.blog-single-page .img-n-details{
+    margin-bottom: 25px;
+    .img-details{
+        padding: 10px 15px;
+    }
+}
+
+
+
+//portfolio and Pagination section
+.pagination{
+    margin: 20px 0 0;
+}
+.page-item{
+    &.active .page-link{
+        background: darken($primary-color, 10%);
+        color: $default-color !important
+    }
+    .page-link{
+        color: darken($primary-color, 10%) !important;
+        border-color: darken($primary-color, 10%) !important;
+    }
+}
+.client-logos{
+    li{
+        display: inline-block;
+        width: auto;
+        margin: 0 10px 10px;
+        img{
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            @include add-border(2px, $primary-color, all);
+            cursor: pointer;
+            opacity:0.7;
+            &:hover{
+                opacity: 1;
+                transition: all 1s ease-in-out;
+            }
+        }
+    }
+}
+
+
+//--img over lay
+.overlay-on-img{
+    position: relative;
+    display: inline-block;
+    float: none;
+    margin-bottom: 25px;
+    overflow: hidden;
+    @include add-border(1px, $primary-color, all);
+    .overlay-img{
+        transition: all .7s ease-in-out;  
+    }
+    &:hover .overlay-img{
+        transform: scale(1.3);
+    }
+    .overlay-content{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding-top: 45%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,.7);
+        opacity: 0;
+        -moz-transition: opacity 0.7s ease-in-out;
+        -o-transition: opacity 0.7s ease-in-out;
+        -webkit-transition: opacity 0.7s ease-in-out;
+        transition: opacity 0.7s ease-in-out;
+        &.long{
+            padding-top: 30%;
+        }
+    }
+    &:hover .overlay-content{
+        opacity: 1;
+    }
+}
+
+
+// Modal style
+.modal-footer{text-align: center}
+.project-modal-details{
+    button.close{
+        position: absolute;
+        top: 20px;
+        right: 29px;
+        opacity: .6;
+        span{
+            font-size: 30px;
+            color: #4267b2;
+            font-family: $ff-base;
+        }
+    }
+    .project-details{
+        span{
+            margin: 0 15px 0 0;
+        }
+        strong{
+                color: $primary-color;
+        }
+    }
+
+}

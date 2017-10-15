@@ -1,0 +1,9 @@
+footer{
+    @include add-border(3px, $secondary-color, top)
+}
+.footer-social .fa{
+    color: $default-color;
+    &:hover,&:focus{
+        color: $secondary-color;
+    }
+}

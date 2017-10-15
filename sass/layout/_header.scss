@@ -1,0 +1,30 @@
+header{position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 4;
+    @include add-border(3px, $secondary-color, bottom);
+}
+nav{
+    margin: 0 !important;
+    .logo{
+        color: $default-color;
+        font-family: $ff-heading;
+        font-size: $fs-base + 20;
+        padding: 0;
+        margin: 12px 0 13px 10px !important;
+        height: auto;
+    }
+}
+.navbar-nav{
+    .nav-item, .nav-link{
+        color: $default-color;
+        &:hover,:focus{
+            color: darken($primary-color,10%);
+            background: $default-color;
+        }
+    }
+}
+.nav-item.active .nav-link{
+    color: darken($primary-color,10%);
+    background: $default-color;
+}
